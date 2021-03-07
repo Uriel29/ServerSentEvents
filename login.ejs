@@ -1,0 +1,38 @@
+
+//faço um ajax para o criar um usário. 
+//uso baco de dados MongoDB 
+
+    const criar = ()=>{
+    const rawResponse = await fetch('/criaruser', {
+     method: 'POST',
+     headers: {
+     'Accept': 'application/json',
+     'Content-Type': 'application/json'
+     },
+     body: JSON.stringify(json)
+     });
+      console.log("resposta do server",rawResponse);
+     
+     const content = await rawResponse.json();
+
+     console.log("resposta do server",content);
+
+
+     });
+     
+
+const source = new EventSource('/eventos');
+
+source.addEventListener('message', message => {
+
+console.log('Serve sent', message);
+
+// Display the event data in the `content` div
+document.querySelector(".content").innerHTML = message.data;
+
+
+})
+
+ criar()
+ 
+ 
