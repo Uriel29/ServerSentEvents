@@ -36,12 +36,8 @@ app.use(express.urlencoded({
 
 
 
-app.use('/', routeUser);
-
-
-
-
-
+//https://masteringjs.io/tutorials/express/server-sent-events
+//https://stackoverflow.com/questions/34657222/how-to-use-server-sent-events-in-express-js
 
 app.get('/eventos', (req, res) => {
 
